@@ -1,0 +1,33 @@
+class Solution 
+{
+    //Function to reverse words in a given string.
+    String reverseWords(String S)
+    {
+        String S1[] = S.split("\\.");
+        StringBuilder rev = new StringBuilder();
+        
+        for(int i=S1.length-1;i>=0;i--){
+            rev.append(S1[i]);
+            
+            if(i !=0){
+                rev.append(".");
+            }
+        }
+        
+        return rev.toString();
+      
+    }
+}
+
+1. public class StringFormatter {  
+2. public static String reverseWord(String str){  
+3.     String words[]=str.split("\\s");  
+4.     String reverseWord="";  
+5.     for(String w:words){  
+6.         StringBuilder sb=new StringBuilder(w);  
+7.         sb.reverse();  
+8.         reverseWord+=sb.toString()+" ";  
+9.     }  
+10.     return reverseWord.trim();  
+11. }  
+12. }  
