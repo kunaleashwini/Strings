@@ -1,0 +1,19 @@
+class Solution
+{
+String convertToRoman(int n) {
+        int val[] = {1000, 500, 100, 50,10, 5,1};
+        String syms[] = {"M", "D","C","L","X","V","I"};
+        
+        StringBuilder romNo = new StringBuilder();
+        int i=0;
+        
+        while(n>0){
+            while(n >= val[i]){
+                n -= val[i];
+                romNo.append(syms[i]);
+            }
+            i++;
+        }
+        return romNo.toString();
+}
+}
